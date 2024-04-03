@@ -1,4 +1,5 @@
 const inquiryDate = getYesterdayDate();
+document.getElementById('targetDate').textContent = inquiryDate;
 
 const form = document.querySelector('form');
 form.addEventListener('submit', async function (event) {
@@ -26,6 +27,7 @@ async function display(KOBIS_API_KEY, TMDB_API_KEY) {
     const boxOfficeArray = await getBoxOffice(KOBIS_API_KEY);
     const movieNameEngArray = await getMovieInfo(boxOfficeArray, KOBIS_API_KEY);
     const posterLinkArray = await getPosterLink(movieNameEngArray, TMDB_API_KEY);
+    
 
     const posterImg = document.querySelector('#posterImg');
     posterLinkArray.forEach(movie => {
