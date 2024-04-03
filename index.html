@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>한국 박스오피스 포스터</title>
+</head>
+
+<body>
+    <header>
+        <h1>한국 박스오피스 포스터</h1>
+        <p>국내 박스오피스 상위 10위의 영화 포스터 이미지를 조회합니다.</p>
+        <p><a href="https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do">영화진흥위원회 OPEN API</a>와 <a href="https://developer.themoviedb.org/docs/getting-started">TMDB API</a>를 활용하여 제작하였습니다.</p>
+        <p><strong>사용을 위해 두 서비스의 API Key가 필요합니다.</strong></p>
+
+        <form>
+            <div>
+                <label for="kobisApiKey">영화진흥위원회 API Key:</label>
+                <input type="text" id="kobisApiKey" name="kobisApiKey" required>
+            </div>
+
+            <div>
+                <label for="tmdbApiKey">TMDB API Key:</label>
+                <input type="text" id="tmdbApiKey" name="tmdbApiKey" required>
+            </div>
+
+            <button type="submit" id="submitBtn">조회</button>
+        </form>
+    </header>
+
+    <main>
+        <section>
+            <h2>일간 박스오피스</h2>
+            <table id="boxOffice">
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>영화명(국문)</th>
+                        <th>영화 대표코드</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 호출된 영화 박스오피스 -->
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>영화 상세정보</h2>
+            <table id="movieInfo">
+                <thead>
+                    <tr>
+                        <th>영화 대표코드</th>
+                        <th>영화명 영문(영문)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 호출된 영화 상세정보 -->
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>SEARCH - Movie</h2>
+            <table id="posterLink">
+                <thead>
+                    <tr>
+                        <th>영화명(영문)</th>
+                        <th>포스터 이미지 링크</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 호출된 영화 포스터 이미지 링크 -->
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>호출 결과</h2>
+            <ol id="posterImg">
+                <!-- 호출 결과 -->
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Developed by <a href="https://github.com/builter251">builter251</a></p>
+    </footer>
+</body>
+
+</html>
