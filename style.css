@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -40,7 +46,7 @@ form button {
     font-size: 1rem;
     background-color: #333;
     color: #fff;
-    border: 1px solid #777777;
+    border: 1px solid #555;
     cursor: pointer;
 }
 
@@ -49,7 +55,8 @@ form button:hover {
 }
 
 form button:disabled {
-    background-color: #ff0;
+    background-color: #555;
+    color: #333;
     cursor: not-allowed;
 }
 
