@@ -94,7 +94,7 @@ tbody tr:nth-child(odd) {
 
 ol {
     display: flex;
-    width: 90%;
+    width: 90vw;
     overflow-x: scroll;
     margin: 1rem auto;
 }
