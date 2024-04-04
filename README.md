@@ -6,7 +6,7 @@
 
 ## 사전 요구사항
 - [영화진흥위원회 OPEN API Key](https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do)
-- [TMDB API Key](https://developer.themoviedb.org/docs/getting-started)
+- [TMDB API 읽기 액세스 토큰](https://developer.themoviedb.org/docs/getting-started)
 
 ## 사용 방법
 해당 리포지토리 clone 또는 ZIP 다운로드 후 index.html을 통해 사용
