@@ -70,7 +70,7 @@ h2 {
 }
 
 table {
-    width: 90%;
+    width: 90vw;
     margin: 0 auto;
     border-collapse: collapse;
     text-align: center;
@@ -94,6 +94,8 @@ tbody tr:nth-child(odd) {
 
 ol {
     display: flex;
+    justify-content: space-around;
+    list-style: none;
     width: 90vw;
     overflow-x: scroll;
     margin: 1rem auto;
@@ -104,7 +106,7 @@ li {
 }
 
 img {
-    height: 300px;
+    height: 200px;
 }
 
 footer {
@@ -114,17 +116,3 @@ footer {
     padding: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-    ol {
-        display: block;
-    }
-
-    li {
-        margin-bottom: 10px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}

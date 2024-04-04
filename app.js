@@ -15,6 +15,7 @@ form.addEventListener('submit', async function (event) {
         } catch (error) {
             console.error('Display Error: ', error);
             alert('영화 정보를 표시 중 오류가 발생하였습니다.')
+            form.querySelector('button[type="submit"]').disabled = false;
         }
     } else {
         // If any API key is missing, display an alert
@@ -82,6 +83,7 @@ async function getBoxOffice(KOBIS_API_KEY) {
         return boxOfficeArray;
 
     } catch (error) {
+        form.querySelector('button[type="submit"]').disabled = false;
         console.error('KOBIS Box Office Fetching Error: ', error);
         alert('KOBIS Box Office API 요청 중 오류가 발생하였습니다.');
     }
@@ -129,6 +131,7 @@ async function getMovieInfo(boxOfficeArray, KOBIS_API_KEY) {
     try {
         return await Promise.all(promise);
     } catch (error) {
+        form.querySelector('button[type="submit"]').disabled = false;
         console.error('KOBIS Movie Info Fetching Error: ', error);
         alert('KOBIS Movie Info 요청 중 오류가 발생하였습니다.');
     }
@@ -186,6 +189,7 @@ async function getPosterLink(movieNameEngArray, TMDB_API_KEY) {
         form.querySelector('button[type="submit"]').disabled = false;
         return await Promise.all(promise);
     } catch (error) {
+        form.querySelector('button[type="submit"]').disabled = false;
         console.error("TMDB Poster Fetching Error: ", error);
         alert('TMDB 포스터 링크 요청중 오류가 발생하였습니다.')
     }
